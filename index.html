@@ -12,14 +12,44 @@
     </header>
     <main>
         <section class="input-section">
-            <label for="input-field">Celsius</label>
+            <nav class="suhu">
+                <div id="suhu-diketahui">Celsius</div>
+                <div id="suhu-ditanya">Fahrenheit</div>
+            </nav>
+            <nav>
+                <input class="input-suhu" type="number" placeholder="0">
+                <img src="assets/tanda panah kanan.png" height="30px" width="30px">
+                <input class="output-suhu" type="number" placeholder="0">
+            </nav>  
+            <!-- <label for="input-field">Celsius</label>
             <input id="input-field" type="number" placeholder="0">
             <div id="input-button">
                 <button>Konversi</button>
                 <button>Reset</button>
                 <button>Reverse</button>
-            </div>
+            </div> -->
         </section>
+        <div class="grid-kalkulator">
+            <button class="reset">Reset</button>
+            <button class="convert">Convert</button>
+            <input class="cara-kalkulasi" type="text" name="display">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="backspace">Backspace</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="reverse">Reverse</button>
+            <input class="cara-konversi" type="text" name="display">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="indikator"></button>
+            <button class="black">+-</button>
+            <button>0</button>
+            <button class="black">.</button>
+    </div>
     </main>
 </body>
 </html>

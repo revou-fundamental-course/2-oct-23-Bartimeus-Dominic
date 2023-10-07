@@ -17,14 +17,32 @@ label {
     font-size: 16px;
     color: #27005D;
 }
-input {
+.input-suhu {
     padding: 10px;
     border: #27005D solid 1px;
     border-radius: 4px;
     outline: none;
-    margin-bottom: 4px;
+    width: 150px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    margin-left: 150px;
+    margin-right: 20px;
 }
-input:focus {
+.input-suhu:focus {
+    border-color: #9400FF;
+}
+.output-suhu {
+    padding: 10px;
+    border: #27005D solid 1px;
+    border-radius: 4px;
+    outline: none;
+    width: 150px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.output-suhu:focus {
     border-color: #9400FF;
 }
 button {
@@ -40,16 +58,117 @@ button {
     margin-left: 2px;
     margin-right: 2px;
 }
-#input-button {
-    display: flex;
-    align-self: center;
-}
 button:hover {
     background-color: #9400FF;
 }
 button:active {
     background-color: rgb(175,65,255);
     transform: translateY(3px);
+}
+.reset {
+    grid-column: 1 / span 2;
+    background-color: #C70039;
+}
+.reset:hover {
+    background-color: #FF6969;
+}
+.reset:active {
+    background-color: rgb(175,65,255);
+    transform: translateY(3px);
+}
+.convert {
+    grid-column: 3 / span 2;
+    background-color: black;
+}
+.convert:hover {
+    background-color: rgb(70,70,70);
+}
+.convert:active {
+    background-color: rgb(175,65,255);
+    transform: translateY(3px);
+}
+.cara-kalkulasi {
+    grid-column-start: 5;
+    grid-row: 1 / span 2;
+}
+.reverse {
+    background-color: #E55604;
+}
+.reverse:hover {
+    background-color: #FFB000;
+}
+.reverse:active {
+    background-color: rgb(175,65,255);
+    transform: translateY(3px);
+}
+.backspace {
+    background-color: #2E4374;
+}
+.backspace:hover {
+    background-color: #4B527E;
+}
+.backspace:active {
+    background-color: rgb(175,65,255);
+    transform: translateY(3px);
+}
+.cara-konversi {
+    grid-column-start: 5;
+    grid-row: 3 / span 3;
+}
+.indikator {
+    grid-column-start: 4;
+    grid-row: 4 / span 2;
+    background-color: yellow;
+    cursor: auto;
+}
+.indikator:hover {
+    background-color: yellow;
+}
+.indikator:active {
+    background-color: yellow;
+    transform: translateY(0px);
+}
+#input-button {
+    display: flex;
+    align-self: center;
+}
+.suhu {
+    display: flex;
+    justify-content: flex-start;
+    height: 20px;
+    align-items: center;
+}
+#suhu-diketahui {
+    width: 150px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 160px;
+    margin-right: 35px;
+    font-weight: bold;
+}
+#suhu-ditanya {
+    width: 150px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 67px;
+    margin-right: 35px;
+    font-weight: bold;
+}
+.grid-kalkulator {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 50px 50px 50px 50px 650px;
+    margin-left: 120px
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
