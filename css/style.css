@@ -46,7 +46,7 @@ label {
     border-color: #9400FF;
 }
 button {
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -102,7 +102,7 @@ button:active {
     background-color: rgb(175,65,255);
     transform: translateY(3px);
 }
-/*.backspace {
+.backspace {
     background-color: #2E4374;
 }
 .backspace:hover {
@@ -111,14 +111,24 @@ button:active {
 .backspace:active {
     background-color: rgb(175,65,255);
     transform: translateY(3px);
-}*/
+}
+.black {
+    background-color: black;
+}
+.black:hover {
+    background-color: rgb(70, 70, 70);
+}
+.black:active {
+    background-color: rgb(175,65,255);
+    transform: translateY(3px);
+}
 .cara-konversi {
     grid-column-start: 5;
     grid-row: 3 / span 3;
 }
 .indikator {
     grid-column-start: 4;
-    grid-row: 3 / span 3;
+    grid-row-start: 5;
     background-color: yellow;
     cursor: auto;
 }
@@ -168,7 +178,7 @@ button:active {
 .grid-kalkulator {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 50px 50px 50px 100px 600px;
+    grid-template-columns: 50px 50px 50px 120px 700px;
     margin-left: 120px
 }
 body {

@@ -1,6 +1,6 @@
 var displaykalkulator = ""
 function buttonclick(e) {
-    if (e == "1" || e == "2" || e == "3" || e == "4" || e == "5" || e == "6" || e == "7" || e == "8" || e == "9" || e == "0" || e == "Reset" || e == ".") {
+    if (e == "1" || e == "2" || e == "3" || e == "4" || e == "5" || e == "6" || e == "7" || e == "8" || e == "9" || e == "0" || e == "Reset" || e == "00" || e == ".") {
         if (e == "Reset") {
             displaykalkulator = ""
             document.getElementById("output-suhu").value = ""
@@ -8,7 +8,6 @@ function buttonclick(e) {
             document.getElementById("cara-konversi").value = ""
         } else {
             displaykalkulator = displaykalkulator + e
-            console.log(displaykalkulator)
         }
         document.getElementById("input-suhu"). value = displaykalkulator
     } else {
@@ -43,7 +42,6 @@ function konversicelsiusfahrenheit() {
 function buttonkaliminus1() {
     let suhuinput = document.getElementById("input-suhu").value
     let suhuinputkaliminus1 = (parseFloat(suhuinput) * (-1))
-    console.log(suhuinputkaliminus1)
     document.getElementById("input-suhu"). value = suhuinputkaliminus1
 }
 function buttonreverse() {
@@ -58,4 +56,25 @@ function buttonreverse() {
     let suhutemp = document.getElementById("input-suhu").value
     document.getElementById("input-suhu").value = document.getElementById("output-suhu").value
     document.getElementById("output-suhu").value = suhutemp
+}
+function buttonclickbackspace() {
+    var string = document.getElementById("input-suhu").value
+    string = string.substring(0, string.length-1)
+    document.getElementById("input-suhu").value = string
+    displaykalkulator = string
+}
+function buttonclickdecimal() {
+    var stringawal = document.getElementById("input-suhu").value
+    var substring = "."
+    if (stringawal.includes(substring) == true) {
+        var stringawal = document.getElementById("input-suhu"). value
+        var stringbaru = stringawal.split('.').join('')
+        document.getElementById("input-suhu").value = stringbaru
+        displaykalkulator = stringbaru
+    } else {
+        var inputlama = document.getElementById("input-suhu").value
+        var inputbaru = inputlama + '.'
+        document.getElementById("input-suhu").value = inputbaru
+        displaykalkulator = inputbaru
+    }
 }
