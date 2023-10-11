@@ -12,15 +12,17 @@
     </header>
     <main>
         <section class="input-section">
-            <nav class="suhu">
-                <div id="suhu-diketahui">Celsius</div>
-                <div id="suhu-ditanya">Fahrenheit</div>
-            </nav>
-            <nav>
-                <input class="input-suhu" type="number" placeholder="0">
-                <img src="assets/tanda panah kanan.png" height="30px" width="30px">
-                <input class="output-suhu" type="number" placeholder="0">
-            </nav>  
+            <form action="">
+                <nav class="suhu">
+                    <div id="suhu-diketahui">Celsius</div>
+                    <div id="suhu-ditanya">Fahrenheit</div>
+                </nav>
+                <nav>
+                    <input id="input-suhu" placeholder="0">
+                    <img src="assets/tanda panah kanan.png" height="30px" width="30px">
+                    <input id="output-suhu" placeholder="0" disabled>
+                </nav>  
+            </form>
             <!-- <label for="input-field">Celsius</label>
             <input id="input-field" type="number" placeholder="0">
             <div id="input-button">
@@ -30,26 +32,26 @@
             </div> -->
         </section>
         <div class="grid-kalkulator">
-            <button class="reset">Reset</button>
-            <button class="convert">Convert</button>
-            <input class="cara-kalkulasi" type="text" name="display">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="backspace">Backspace</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="reverse">Reverse</button>
-            <input class="cara-konversi" type="text" name="display">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+            <button class="reset" onClick=buttonclick(this.innerText)>Reset</button>
+            <button class="convert" onClick=konversicelsiusfahrenheit()>Convert</button>
+            <input class="cara-kalkulasi" id="cara-kalkulasi" type="text" name="display" disabled>
+            <button onClick=buttonclick(this.innerText)>7</button>
+            <button onClick=buttonclick(this.innerText)>8</button>
+            <button onClick=buttonclick(this.innerText)>9</button>
+            <button class="reverse" onClick=buttonreverse()>Reverse</button>
+            <button onClick=buttonclick(this.innerText)>4</button>
+            <button onClick=buttonclick(this.innerText)>5</button>
+            <button onClick=buttonclick(this.innerText)>6</button>
+            <input class="cara-konversi" id="cara-konversi" type="text" name="display" disabled>
+            <button onClick=buttonclick(this.innerText)>1</button>
+            <button onClick=buttonclick(this.innerText)>2</button>
+            <button onClick=buttonclick(this.innerText)>3</button>
             <button class="indikator"></button>
-            <button class="black">+-</button>
-            <button>0</button>
-            <button class="black">.</button>
+            <button class="black" onClick=buttonkaliminus1()>+-</button>
+            <button onClick=buttonclick(this.innerText)>0</button>
+            <button class="black" onClick=buttonclick(this.innerText)>.</button>
     </div>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
